@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags for proper rendering and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <!-- Link to custom stylesheet for additional styling -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- Include Tailwind CSS framework via CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Main container with dark theme and padding -->
+    <div class="w-full h-full bg-zinc-800 p-10 text-white">
+        <!-- Navigation section with link to users list -->
+        <div class="nav mb-20">
+            <a class="text-blue-500 hover:text-blue-400" href="/read">Read Users</a>
+        </div>
+        <!-- Page heading with custom tracking -->
+        <h1 class="text-3xl tracking-tighter mb-3">Create User</h1>
+        <!-- User creation form - Posts to /create endpoint -->
+        <form action="/create" method="post">
+            <!-- Name input field with transparent background -->
+            <input 
+                class="px-5 py-3 bg-transparent border-2 border-zinc-800 focus:border-zinc-700 outline-none" 
+                type="text" 
+                name="name" 
+                placeholder="name"
+                required
+            >
+            <!-- Email input field with transparent background -->
+            <input 
+                class="px-5 py-3 bg-transparent border-2 border-zinc-800 focus:border-zinc-700 outline-none" 
+                type="email" 
+                name="email" 
+                placeholder="email"
+                required
+            >
+            <!-- Image URL input field with transparent background -->
+            <input 
+                class="px-5 py-3 bg-transparent border-2 border-zinc-800 focus:border-zinc-700 outline-none" 
+                type="url" 
+                name="image" 
+                placeholder="image url"
+                required
+            >
+            <!-- Submit button with blue background -->
+            <input 
+                class="px-5 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg ml-3 cursor-pointer" 
+                type="submit" 
+                value="Create User"
+            >
+        </form>
+    </div>
+</body>
+</html>

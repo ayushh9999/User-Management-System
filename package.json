@@ -1,0 +1,42 @@
+{
+  "name": "user-management-system",
+  "version": "1.0.0",
+  "description": "A full-stack web application for managing users with CRUD operations using Node.js, Express.js, MongoDB, and EJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "ejs",
+    "crud",
+    "user-management",
+    "tailwindcss",
+    "web-application"
+  ],
+  "author": "Ayush Mondal <ayushh9999@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayushh9999/User-Management-System.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ayushh9999/User-Management-System/issues"
+  },
+  "homepage": "https://github.com/ayushh9999/User-Management-System#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

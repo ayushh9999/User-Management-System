@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags for proper rendering and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <!-- Link to custom stylesheet for additional styling -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- Include Tailwind CSS framework via CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="w-full h-full bg-zinc-800 p-10 text-white">
+        <!-- Navigation link -->
+        <a class="text-blue-500" href="/">Back to Home</a>
+        <!-- Page heading -->
+        <h1 class="text-3xl mt-10 tracking-tighter mb-3">All Users</h1>
+        <!-- Users list -->
+        <div class="users flex gap-5 flex-wrap">
+            <% users.forEach(function(user) { %>
+                <!-- Single user card -->
+                <div class="user w-72 p-5 bg-zinc-800 rounded-lg">
+                    <!-- User avatar -->
+                    <div class="w-full h-52 rounded-lg bg-zinc-700">
+                        <img src="<%= user.image %>" alt="<%= user.name %>" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <!-- User name -->
+                    <h3 class="text-xl mt-3 tracking-tighter"><%= user.name %></h3>
+                    <!-- User email -->
+                    <h5 class="text-zinc-600"><%= user.email %></h5>
+                    <!-- Action buttons for user management -->
+                    <div class="flex gap-3 mt-5">
+                        <!-- Edit button - Links to user edit page -->
+                        <a href="/edit/<%= user._id %>" class="text-blue-500 hover:text-blue-400">Edit</a>
+                        <!-- Delete button - Triggers user deletion -->
+                        <a href="/delete/<%= user._id %>" class="text-red-500 hover:text-red-400">Delete</a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
